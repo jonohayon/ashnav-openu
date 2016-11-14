@@ -3,6 +3,16 @@
 \geometry{letterpaper}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{array}
+
+% Initializing graphicx
+\usepackage{graphicx}
+\graphicspath{{assets/}}
+
+% Custom Commands
+\newcommand{\img}[1] {
+	\includegraphics[scale=0.33]{#1}
+}
 
 \title{Maman 11}
 \author{Jonathan Ohayon}
@@ -32,8 +42,17 @@ f(x) \rightarrow 8
 \end{equation*}
 Every $x \in A$ is matched to \emph{8}.\\
 $\bigotimes$
+\clearpage
 
 \section{Question 2}
+\begin{center}
+\begin{tabular}{ c c c }
+\img{A} & \img{B} & \img{C}\\
+A & B & C\\
+\img{D} & \img{E}\\
+D & E\\
+\end{tabular}
+\end{center}
 
 \section{Question 3}
 \subsection{A}
