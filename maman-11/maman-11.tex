@@ -3,7 +3,7 @@
 \geometry{letterpaper}
 \usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage{array}
+\usepackage{hyperref}
 
 % Initializing graphicx
 \usepackage{graphicx}
@@ -19,10 +19,17 @@
 
 \begin{document}
 \maketitle
+\setcounter{section}{-1}
+
+\section{Declarations}
+\subsection{Infinite Set}
+\begin{center}
+\emph{A set of elements E is said to be infinite if the elements of a proper subset S can be put into one-to-one correspondence with the elements of E.\footnote{Taken from \url{http://mathworld.wolfram.com/InfiniteSet.html}, just for the English version of this definition.}}
+\end{center}
 
 \section{Question 1}
 \subsection{A}
-Yes. Using the following injective function:
+Yes. Using the following function:
 \begin{equation*}
 f(x) \rightarrow \frac{2}{x/2}
 \end{equation*}
@@ -42,6 +49,14 @@ f(x) \rightarrow 8
 \end{equation*}
 Every $x \in A$ is matched to \emph{8}.\\
 $\bigotimes$
+
+\subsection{C}
+Yes, using the function declared in answer A ($f(x) \rightarrow \frac{2}{x/2}$), $\frac{2}{1} \in B$ (which is 2) is matched to $2 \in A$.
+
+\subsection{D}
+Yes. By definition, 
+
+
 \clearpage
 
 \section{Question 2}
@@ -65,18 +80,18 @@ Then:
 A \cup B = \{1, 2, 3, 4\}\Rightarrow
 A \backslash B = \{3, 4\}\Rightarrow
 A \cup B \neq A \backslash B
-\end{equation*}\\
+\end{equation*}
 Therefore, \emph{B} has to be $\emptyset$.\\
 $\bigotimes$
 
 \subsection{B}
 No. Let \emph{A} and \emph{B} be the following sets:
-\begin{equation}
-A = \mathbb{N}, B = \{2, 4, 6, \ldots\}
-\end{equation}
-Then $A \cup B \sim A \backslash B$, using the following injective function:
 \begin{equation*}
-f(x) = 2x
+A = \mathbb{N}, B = \{2, 4, 6, \ldots\}
+\end{equation*}
+Then $A \cup B \sim A \backslash B$, using the following function:
+\begin{equation*}
+f(x) \rightarrow 2x
 \end{equation*}
 Every $x \in A$ has one arrow sent from it to $2x \in B$, and every $y \in B$ has an arrow from $\frac{1}{2}y \in A$.\\
 Therefore, \emph{B} doesn't have to be $\emptyset$.\\
@@ -92,12 +107,27 @@ Yes. Let \emph{A}, \emph{B}, \emph{C} and \emph{D} be the following sets:
 & D = A \backslash B = \{1, 2\}
 \end{split}
 \end{equation*}
-Then $D \nsim C$ because no injective function could match \emph{D}'s members with \emph{C}'s members, since the number of members in \emph{D} is smaller than the number of members in \emph{C}.\\
+Then $D \nsim C$ because no there is no one-to-one correspondence between \emph{D} and \emph{C}, since the number of elements in \emph{D} is smaller than the number of elements in \emph{C}.\\
 Therefore, \emph{B} has to be $\emptyset$.\\
 $\bigotimes$
+\clearpage
 
 \section{Question 4}
 \subsection{A}
+No. Let \emph{A} and \emph{B} be the following sets:
+\begin{equation*}
+A = \{2, 3, 4, 5\}, B = \{5, 6, 7, 8\}
+\end{equation*}
+Then $B = A\backslash\{1\}$ and $A \sim B$ (with this function: $f(x) \rightarrow x + 3$), yet \emph{A} is finite (since it has 4 elements, and 4 isn't infinity).\\
+Therefore, \emph{A} doesn't have to be infinite.\\
+$\bigotimes$
+
+\subsection{B}
+Yes. \emph{B} is a proper subset of \emph{A} ($B \subset A$, since $A \neq B$), and according to the question's declarations, \emph{A} has one-to-one correspondence to \emph{B} ($A \sim B$).\\
+Therefore, \emph{A} has to be infinite.\\
+$\bigotimes$
+
+\subsection{C}
 
 
 \end{document}
