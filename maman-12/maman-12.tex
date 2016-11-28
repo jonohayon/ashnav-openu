@@ -1,0 +1,129 @@
+\documentclass[12pt, oneside]{article}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+% Initializing graphicx
+\usepackage{graphicx}
+\graphicspath{{assets/}}
+
+% Custom Commands
+\newcommand{\img}[1] {
+	\includegraphics[scale=0.33]{#1}
+}
+
+\title{Maman 12}
+\author{Jonathan Ohayon}
+\date{November 27, 2016}
+
+\begin{document}
+\maketitle
+
+\section{Question 1}
+\setcounter{subsection}{-1}
+\subsection{Declarations}
+Let \emph{A} and \emph{B} be the following sets:
+\begin{equation*}
+A = \{1, \{2\}, \emptyset\}, B = \{1, 2\}
+\end{equation*}
+
+\subsection{A}
+Answer:
+\begin{equation*}
+\begin{split}
+& P(A) = \{\emptyset, \{1\}, \{\{2\}\}, \{\emptyset\}, \{1, \{2\}\}, \{\{2\}, \emptyset\}, \{1, \emptyset\}, A\}\\
+& P(B) = \{\emptyset, \{1\}, \{2\}, B\}
+\end{split}
+\end{equation*}
+
+\subsection{B}
+Answer:
+\begin{equation*}
+\begin{split}
+& P(A) \backslash P(B) = \{\{\{2\}\}, \{\emptyset\}, \{1, \{2\}\}, \{\{2\}, \emptyset\}, \{1, \emptyset\}, A\}\\
+& P(B) \backslash ֿP(A) = \{\{2\}, B\}
+\end{split}
+\end{equation*}
+\clearpage
+
+\subsection{C}
+Let $P(\emptyset)$ and $P(P(\emptyset))$ be the following sets:
+\begin{equation*}
+\begin{split}
+& P(\emptyset) = \{\emptyset\}\\
+& P(P(\emptyset)) = \{\emptyset, \{\emptyset\}\}
+\end{split}
+\end{equation*}
+The number of elements in $P(\emptyset)$ is 1 ($2^0$, since there are no elements in $\emptyset$), and the number of elements in $P(P(\emptyset))$ is 2 ($2^1$, since the number of elements in $P(\emptyset)$ is 1).\\
+Therefore, there cannot be a one to one correspondence between $P(\emptyset)$ and $P(P(\emptyset))$ ($P(\emptyset) \not\sim P(P(\emptyset))$).
+
+\section{Question 2}
+\subsection{A}
+Let \emph{D} and \emph{E} be the following sets and \emph{x}:
+\begin{equation*}
+D = (A \cup B) \cap (C \backslash A), E = (B \backslash A) \cap C, x \in D
+\end{equation*}
+Let's assume that $D \neq E$, in order to prove this using contradiction.\\
+If $x \in D$, then:
+\begin{equation*}
+\begin{split}
+& x \in A \cup B\;\text{and}\;x \in C \backslash A \Rightarrow \\
+& x \in A\;\text{or}\;B\;\text{and}\;x \in C\;\text{but}\;x \not\in A \Rightarrow \\
+& x \in B, C\;\text{and}\; x \not\in A\Rightarrow \\
+& x \in B \backslash A, \Rightarrow \\
+& x \in (B \backslash A) \cap C
+\end{split}
+\end{equation*}
+Therefore, $D \subseteq E$.\\
+If $x \in E$:
+\begin{equation*}
+\begin{split}
+& x \in B \backslash A\;\text{and}\;x \in C \Rightarrow \\
+& x \in B, C\;\text{and}\;x \not\in A \Rightarrow \\
+& x \in A \cup B\;\text{and}\;x \in C \Rightarrow \\
+& x \in (A \cup B) \cap (C \backslash A)
+\end{split}
+\end{equation*}
+Therefore, $E \subseteq D$.\\
+According to the results, $E \subseteq D$ and $D \subseteq E$. Therefore there's a contradiction between our assumption and the question's constants, and $D = E$.
+
+\subsection{B}
+Yes. Let's assume that $(A \backslash C) \cap B \neq \emptyset$, in order to prove this using contradiction. Then:
+\begin{equation*}
+\begin{split}
+& A \backslash C \neq \emptyset \Rightarrow \\
+& B \neq \emptyset \Rightarrow \\
+& A \neq \emptyset \Rightarrow \\
+& A \cup B \neq \emptyset \Rightarrow \\
+& A \cup B \not\subseteq A \backslash B \Rightarrow \\
+& (A \cup B) \backslash C \not\subseteq A \backslash B
+\end{split}
+\end{equation*}
+Since we got a contradiction between the result and the question's constants, the assumption that $(A \backslash C) \cap B = \emptyset$ is correct.
+
+\subsection{C}
+Yes. Let $E \subseteq A$. Then:
+\begin{equation*}
+\begin{split}
+& E \in P(A) \Rightarrow \\
+& E \subseteq B \cap C \Rightarrow \\
+& E \in P(B) \cap P(C) \Rightarrow \\
+& P(A) = P(B) \cap P(C)
+\end{split}
+\end{equation*}
+
+\subsection{D}
+No. Let \emph{A} and \emph{B} be the following sets:
+\begin{equation*}
+\begin{split}
+& A = \{3, 4\}, B = \emptyset\\
+& P(A) = \{\emptyset, \{1\}, \{2\}, A\}\\
+& P(B) = \{\emptyset\}\\
+& P(A \backslash B) = \{\emptyset, \{1\}, \{2\}, A\}
+\end{split}
+\end{equation*}
+Therefore, $P(A) \backslash P(B) = \{\{1\}, \{2\}, A\}$ and since the number of elements in $P(A \backslash B)$ is 
+
+\end{document}
