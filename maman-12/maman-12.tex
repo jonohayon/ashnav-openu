@@ -87,7 +87,7 @@ If $x \in E$:
 \end{split}
 \end{equation*}
 Therefore, $E \subseteq D$.\\
-According to the results, $E \subseteq D$ and $D \subseteq E$. Therefore there's a contradiction between our assumption and the question's constants, and $D = E$.
+According to the results, $E \subseteq D$ and $D \subseteq E$. Therefore there's a contradiction between our assumption and the question's constants, and therefore $D = E$.
 
 \subsection{B}
 Yes. Let's assume that $(A \backslash C) \cap B \neq \emptyset$, in order to prove this using contradiction. Then:
@@ -106,24 +106,84 @@ Since we got a contradiction between the result and the question's constants, th
 \subsection{C}
 Yes. Let $E \subseteq A$. Then:
 \begin{equation*}
-\begin{split}
-& E \in P(A) \Rightarrow \\
-& E \subseteq B \cap C \Rightarrow \\
-& E \in P(B) \cap P(C) \Rightarrow \\
-& P(A) = P(B) \cap P(C)
-\end{split}
+E \in P(A) \Rightarrow E \subseteq B \cap C \Rightarrow E \in P(B) \cap P(C) \Rightarrow P(A) = P(B) \cap P(C)
 \end{equation*}
 
 \subsection{D}
-No. Let \emph{A} and \emph{B} be the following sets:
+Yes. In order to show that $P(A \backslash B) = P(A) \backslash P(B)$, we'll show a two way substitution.
+For every $E \in P(A \backslash B)$:
+\begin{equation*}
+E \in P(A \backslash B) \Rightarrow E \in P(A)\;\text{and}\;E \not\in P(B) \Rightarrow E \in P(A) \backslash P(B)
+\end{equation*}
+Therefore, $P(A \backslash B) \subseteq P(A) \backslash P(B)$.\\
+\hfill\newline
+For every $K \in P(A) \backslash P(B)$:
+\begin{equation*}
+K \in P(A) \backslash P(B) \Rightarrow K \in P(A)\;\text{and}\;E \not\in P(B) \Rightarrow K \in P(A \backslash B)
+\end{equation*}
+Therefore, $P(A) \backslash P(B) \subseteq P(A \backslash B)$.\\
+\hfill\newline
+In conclusion, because there's a two way substitution between $P(A) \backslash P(B)$ and $P(A \backslash B)$, $P(A \backslash B) = P(A) \backslash P(B)$.
+\clearpage
+
+\section{Question 3}
+\subsection{A}
+\setcounter{subsubsection}{-1}
+\subsubsection{Declarations}
+Let \emph{A} be a set with at least 2 elements that belong to it, and a binary operation * defined like so:
+\begin{center}
+For every $a, b \in A\;,\;a * b = b$.
+\end{center}
+
+\subsubsection{Closure}
+In order to show that the * operation implements closure over \emph{A}, we need to show that it's results belong to the \emph{A} set. Therefore, we can use the sentence which we used to define the operation to show that:
+\begin{center}
+For every $a, b \in A\;,\;a * b = b$
+\end{center}
+Since the result of $a * b$ is \emph{b}, which belongs to A, the operation does implement closure.
+
+\subsubsection{Associative property}
+In order to show that the * operation has the associative property over \emph{A}, we need to show that the results of $a * (b * c)$ and $(a * b) * c$ are equal. We can show that using the following explanation:
 \begin{equation*}
 \begin{split}
-& A = \{3, 4\}, B = \emptyset\\
-& P(A) = \{\emptyset, \{1\}, \{2\}, A\}\\
-& P(B) = \{\emptyset\}\\
-& P(A \backslash B) = \{\emptyset, \{1\}, \{2\}, A\}
+& a, b, c \in A\\
+& a * (b * c) = a * c = c\\
+& (a * b) * c = b * c = c\\
 \end{split}
 \end{equation*}
-Therefore, $P(A) \backslash P(B) = \{\{1\}, \{2\}, A\}$ and since the number of elements in $P(A \backslash B)$ is 
+Since both $a * (b * c)$ and $(a * b) * c$ equal \emph{c}, the operation has the associative property.
+\clearpage
+
+\subsubsection{Commutativity}
+In order to show that the * operation implements commutativity over \emph{A}, we need to show that the results of $a * b$ and $b * a$ are equal for every $a, b \in A$. We can show that doesn't happen over \emph{A} using the following counter example:
+\begin{equation*}
+\begin{split}
+& A = \mathbb{N}\\
+& 1 * 2 = 2\\
+& 2 * 1 = 1\\
+& 2 \neq 1
+\end{split}
+\end{equation*}
+Since $2 \neq 1$, the * operation does not implement commutativity.
+
+\subsubsection{Neutral element}
+In order to show that there's a neutral element in \emph{A} under the * operation, we need to show an element of \emph{A} that, when being used in the * operation, returns the other element of \emph{A} (aka $x * e = e * x = x$ for every $x \in A$). We can show that \emph{A} doesn't have a neutral element inside of it using the following counter example:
+\begin{center}
+$A = \{a, b, c\}$\\
+\hfill\break
+\begin{tabular}{c|c|c|c}
+* & a & b & c\\
+\hline
+a & a & b & c\\
+\hline
+b & a & b & c\\
+\hline
+c & a & b & c
+\end{tabular}
+\end{center}
+Since the * operation returns the number to the right of the operator by definition, there isn't any element in the given \emph{A} set that can be used on every other element and return the latter.
+\clearpage
+
+\subsection{B}
 
 \end{document}
